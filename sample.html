@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sample </title>
+    </head>
+    <body>
+        <h1>array contain</h1>
+            <p id="demo1"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits.includes("Mango");
+</script>
+<h1>array mapping</h1>
+<p id="demo2"></p>
+<script>
+const numbers = [1, 2, 3, 4];
+const newArr = numbers.map(myFunction);
+
+document.getElementById("demo2").innerHTML = newArr;
+
+function myFunction(num) {
+  return num * 2;
+}
+</script>
+<h1>array filter</h1>
+<p id="demo3"></p>
+<script>
+const ages = [11, 14, 78, 90];
+
+document.getElementById("demo3").innerHTML = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+</script>
+<h1>array index</h1>
+<p id="demo4"></p>
+<script>
+const alpha = ["a", "b", "c", "d", "e"];
+document.getElementById("demo4").innerHTML = alpha.indexOf("c");
+</script>
+<h1>stringify </h1>
+<script>
+    var obj = {name:"sharmatha", age:20, city:"erode"};
+    var myJSON = JSON.stringify(obj);
+    document.write(myJSON);
+</script>
+<h1>datenow (year from jan1 1970)</h1>
+<p id="demo6"></p>
+
+<script>
+const minute = 1000 * 60;
+const hour = minute * 60;
+const day = hour * 24;
+const year = day * 365;
+let years = Math.round(Date.now() / year);
+document.getElementById("demo6").innerHTML = years;
+</script>
+<h1>arrow function</h1>
+<p id="demo7"></p>
+  
+<script>
+hello = function() {
+  return "Hello";
+}
+
+document.getElementById("demo7").innerHTML = hello();
+</script>
+<p id="demo8"></p>
+  
+<script>
+hello = () => {
+  return "hiiii";
+}
+
+document.getElementById("demo8").innerHTML = hello();
+</script>
+<h1>spread operator</h1>
+<script>
+    const numb = [1, 2, 3, 4, 5, 6];
+    
+    const [one, two, ...rest] = numb;
+    
+    document.write("<p>" + one + "</p>");
+    document.write("<p>" + two + "</p>");
+    document.write("<p>" + rest + "</p>");
+    </script>
+    <h1>sets()</h1>
+    <p id="demo9"></p>
+
+<script>
+// Create a Set
+const letters = new Set();
+
+// Add Values to the Set
+letters.add("a");
+letters.add("b");
+letters.add("c");
+
+// Display set.size
+document.getElementById("demo9").innerHTML = letters.size;
+</script>
+<h1>array reduce</h1>
+
+    <p id="demo10"></p>
+
+<script>
+const numbe = [1, 2, 3];
+document.getElementById("demo10").innerHTML = numbe.reduce(myFunc);
+
+function myFunc(total, num) {
+  return total + num;
+}
+</script>
+<h1>array every</h1>
+<p id="demo11"></p>
+
+<script>
+const age = [32, 33, 16, 40];
+document.getElementById("demo11").innerHTML = age.every(checkAge);
+
+function checkAge(age) {
+  return age > 18;
+}
+</script>
+<h1>some</h1>
+<p id="demo"></p>
+
+<script>
+const age1 = [3, 10, 18, 20];
+document.getElementById("demo").innerHTML = age1.some(checkAdult);
+
+function checkAdult(age1) {
+  return age1> 18;
+}
+</script>
+    </body>
+</html>
